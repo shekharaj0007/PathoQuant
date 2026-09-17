@@ -2,10 +2,11 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
-data/raw/
-data/processed/
+*.egg-info/
+data/
 outputs/*.pt
 outputs/*.pth
+outputs/overlays/
 .ipynb_checkpoints/
 .DS_Store
 Thumbs.db
