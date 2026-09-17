@@ -59,7 +59,7 @@ def main() -> None:
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = UNet(base=args.base).to(device)
-    blob = torch.load(args.ckpt, map_location=device)
+    blob = torch.load(args.ckpt, map_location=device, weights_only=False)
     model.load_state_dict(blob["model"])
     model.eval()
 
@@ -111,7 +111,7 @@ def main() -> None:
     }
     (args.out / "metrics.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps({k: summary[k] for k in ("split", "n", "dice_mean", "aji_mean", "aji_watershed_mean")}, indent=2))
-    print(f"overlays → {viz_dir}")
+    print(f"overlays -> {viz_dir}")
 
 
 if __name__ == "__main__":

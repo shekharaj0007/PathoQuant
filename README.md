@@ -26,15 +26,34 @@ Classical baseline on the same tiles: Otsu → distance transform → watershed 
 
 ## Dataset
 
-[MoNuSeg](https://monuseg.grand-challenge.org/) via Hugging Face [`RationAI/MoNuSeg`](https://huggingface.co/datasets/RationAI/MoNuSeg): 30 train + 14 test H&E tiles, instance contours (~22k nuclei, 7 organs). Patient-level 80/20 val split from train; official test for the reported number.
+[MoNuSeg](https://monuseg.grand-challenge.org/) via Hugging Face [`RationAI/MoNuSeg`](https://huggingface.co/datasets/RationAI/MoNuSeg): 37 train + 14 test H&E tiles, instance contours (~22k nuclei, 7 organs). Patient-level 80/20 split of train (30 / 7 patients, 1470 / 343 patches of 256 with stride 128). Official 14-tile test is the reported number.
 
-## Metrics
+## Results (measured)
+
+Trained 40 epochs on RTX 3050 4 GB (AMP, batch 2 × accum 2, Dice + BCE, cosine LR). Best val Dice **0.849** at epoch 40.
 
 | Split | Dice | AJI | Watershed AJI |
 |---|---|---|---|
-| held-out / test | filled after `evaluate` | filled after `evaluate` | filled after `evaluate` |
+| val (patch) | 0.849 | — | — |
+| **test (14 tiles)** | **0.794** | **0.521** | 0.318 |
 
-AJI (Kumar et al., IEEE TMI) penalizes merged/split nuclei. Semantic U-Net + connected components is an honest instance readout, not HoVer-Net.
+AJI (Kumar et al., IEEE TMI) penalizes merged/split nuclei. Semantic U-Net + connected components is an honest instance readout, not HoVer-Net. DL AJI is **+0.20** over Otsu + watershed on the same tiles.
+
+![Training curves](assets/training_curves.png)
+
+Green = GT contour, red = prediction. Left: H&E. Right: overlay.
+
+**TCGA-44-2665** — test Dice 0.867
+
+![overlay 44-2665](assets/TCGA-44-2665-01B-06-BS6.png)
+
+**TCGA-ZF-A9R5** — test AJI 0.636
+
+![overlay ZF-A9R5](assets/TCGA-ZF-A9R5-01A-01-TS1.png)
+
+**TCGA-EJ-A46H** — test Dice 0.830 / AJI 0.623
+
+![overlay EJ-A46H](assets/TCGA-EJ-A46H-01A-03-TSC.png)
 
 ## Setup (Windows, RTX 3050)
 

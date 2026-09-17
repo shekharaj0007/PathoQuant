@@ -107,7 +107,7 @@ def main() -> None:
                     "model": model.state_dict(),
                     "epoch": epoch,
                     "val_dice": val_dice,
-                    "args": vars(args),
+                    "args": {k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items()},
                 },
                 ckpt,
             )

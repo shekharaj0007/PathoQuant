@@ -1,0 +1,149 @@
+{
+  "split": "test",
+  "n": 14,
+  "dice_mean": 0.7939746872780639,
+  "aji_mean": 0.5211820483262221,
+  "aji_watershed_mean": 0.3177138453646705,
+  "per_image": [
+    {
+      "id": "TCGA-FG-A4MU-01B-01-TS1",
+      "tissue": "Unknown",
+      "dice": 0.8556145627211047,
+      "aji": 0.5495839256715334,
+      "aji_watershed": 0.44928359106232274,
+      "n_nuclei": 448,
+      "mean_area_px": 616.5357142857143,
+      "density_per_mm2": 7168.0
+    },
+    {
+      "id": "TCGA-44-2665-01B-06-BS6",
+      "tissue": "Unknown",
+      "dice": 0.8666419380631128,
+      "aji": 0.4981439449134463,
+      "aji_watershed": 0.5237154755702853,
+      "n_nuclei": 724,
+      "mean_area_px": 421.56906077348066,
+      "density_per_mm2": 11584.0
+    },
+    {
+      "id": "TCGA-2Z-A9J9-01A-01-TS1",
+      "tissue": "Unknown",
+      "dice": 0.7885016666730416,
+      "aji": 0.4613810130834753,
+      "aji_watershed": 0.24955621697641042,
+      "n_nuclei": 555,
+      "mean_area_px": 540.3981981981982,
+      "density_per_mm2": 8880.0
+    },
+    {
+      "id": "TCGA-ZF-A9R5-01A-01-TS1",
+      "tissue": "Unknown",
+      "dice": 0.8546778544241351,
+      "aji": 0.635928223088669,
+      "aji_watershed": 0.24115894817159106,
+      "n_nuclei": 514,
+      "mean_area_px": 504.1828793774319,
+      "density_per_mm2": 8224.0
+    },
+    {
+      "id": "TCGA-69-7764-01A-01-TS1",
+      "tissue": "Unknown",
+      "dice": 0.8093699870350035,
+      "aji": 0.52158648637787,
+      "aji_watershed": 0.4148471813140045,
+      "n_nuclei": 516,
+      "mean_area_px": 448.2248062015504,
+      "density_per_mm2": 8256.0
+    },
+    {
+      "id": "TCGA-A6-6782-01A-01-BS1",
+      "tissue": "Unknown",
+      "dice": 0.7939503587405686,
+      "aji": 0.5359535591927408,
+      "aji_watershed": 0.3018190263115449,
+      "n_nuclei": 465,
+      "mean_area_px": 343.5247311827957,
+      "density_per_mm2": 7440.0
+    },
+    {
+      "id": "TCGA-HT-8564-01Z-00-DX1",
+      "tissue": "Unknown",
+      "dice": 0.5026015260070863,
+      "aji": 0.29538896624976835,
+      "aji_watershed": 0.15053066799561612,
+      "n_nuclei": 947,
+      "mean_area_px": 272.8268215417107,
+      "density_per_mm2": 15152.0
+    },
+    {
+      "id": "TCGA-IZ-8196-01A-01-BS1",
+      "tissue": "Unknown",
+      "dice": 0.8401267250091025,
+      "aji": 0.5982676802003585,
+      "aji_watershed": 0.35499510040306176,
+      "n_nuclei": 580,
+      "mean_area_px": 469.39310344827584,
+      "density_per_mm2": 9280.0
+    },
+    {
+      "id": "TCGA-AO-A0J2-01A-01-BSA",
+      "tissue": "Unknown",
+      "dice": 0.7638335973552304,
+      "aji": 0.4698840311206436,
+      "aji_watershed": 0.2795903753176355,
+      "n_nuclei": 427,
+      "mean_area_px": 789.5620608899297,
+      "density_per_mm2": 6832.0
+    },
+    {
+      "id": "TCGA-CU-A0YN-01A-02-BSB",
+      "tissue": "Unknown",
+      "dice": 0.7964364654750491,
+      "aji": 0.5584001165276448,
+      "aji_watershed": 0.32402050077308836,
+      "n_nuclei": 758,
+      "mean_area_px": 428.28232189973613,
+      "density_per_mm2": 12128.0
+    },
+    {
+      "id": "TCGA-AC-A2FO-01A-01-TS1",
+      "tissue": "Unknown",
+      "dice": 0.7701726163579268,
+      "aji": 0.5013650006240193,
+      "aji_watershed": 0.3139474160364004,
+      "n_nuclei": 604,
+      "mean_area_px": 462.5612582781457,
+      "density_per_mm2": 9664.0
+    },
+    {
+      "id": "TCGA-EJ-A46H-01A-03-TSC",
+      "tissue": "Unknown",
+      "dice": 0.8302243407652167,
+      "aji": 0.623481508143335,
+      "aji_watershed": 0.31771904396378076,
+      "n_nuclei": 525,
+      "mean_area_px": 367.8228571428571,
+      "density_per_mm2": 8400.0
+    },
+    {
+      "id": "TCGA-HC-7209-01A-01-TS1",
+      "tissue": "Unknown",
+      "dice": 0.8091938011492805,
+      "aji": 0.4869506680013088,
+      "aji_watershed": 0.2356995924560669,
+      "n_nuclei": 393,
+      "mean_area_px": 478.38422391857506,
+      "density_per_mm2": 6288.0
+    },
+    {
+      "id": "TCGA-GL-6846-01A-01-BS1",
+      "tissue": "Unknown",
+      "dice": 0.8343001821170358,
+      "aji": 0.5602335533722957,
+      "aji_watershed": 0.2911106987535781,
+      "n_nuclei": 397,
+      "mean_area_px": 599.4937027707808,
+      "density_per_mm2": 6352.0
+    }
+  ]
+}

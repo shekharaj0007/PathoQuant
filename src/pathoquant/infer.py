@@ -25,7 +25,7 @@ def main() -> None:
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = UNet(base=args.base).to(device)
-    model.load_state_dict(torch.load(args.ckpt, map_location=device)["model"])
+    model.load_state_dict(torch.load(args.ckpt, map_location=device, weights_only=False)["model"])
     rgb = np.asarray(Image.open(args.image).convert("RGB"))
     print(f"input {rgb.shape[1]}×{rgb.shape[0]}")
     prob = predict_tile(model, rgb, device)
